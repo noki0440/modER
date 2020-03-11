@@ -1,0 +1,40 @@
+﻿@model Diagnosis
+
+<h2>Update @Model.Name</h2>
+
+@using (Html.BeginForm("UpdateDiagnosisToDatabase", "Diagnosis", "Post"))
+{
+    <input asp-for="DiagnosisID" type="hidden" value="@Model.DiagnosisID" />
+
+
+    <label asp-for="SpecificationID" class="control-label">Specification</label>
+    <select class="form-control" id="SpecificationID" name="SpecificationID" value="@Model.SpecificationID">
+        <option value="1">Virus</option>
+        <option value="2">Mechanical Injury</option>
+        <option value="3">Mechanical Trauma</option>
+        <option value="4">Electrical Charge</option>
+        <option velue="5">Radiation</option>
+        <option value="6">Infection</option>
+    </select>
+
+
+   <label asp-for="Name" class="control-label">Name</label>
+   <input type="text" name="Name" class="form-control" value="@Model.Name" />
+
+
+    <label asp-for="SeverityID" class="control-label">Severity</label>
+    <select class="form-control" id="SeverityID" name="SeverityID" value="@Model.SeverityID">
+        <option value="1">Acute</option>
+        <option value="2">Overuse</option>
+        <option value="3">Chronic</option>
+    </select>
+
+
+    <label asp-for="Date" class="control-label">Date</label>
+
+    <input type="date" id="start" name="Date" value="@Model.Date" />
+
+
+    <input type="submit" value="Update Product" class="btn btn-primary" />
+
+}

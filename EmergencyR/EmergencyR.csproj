@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+
+
+  <ItemGroup>
+    <PackageReference Include="WebEssentials.AspNetCore.PWA" Version="1.0.59" />
+    <PackageReference Include="Dapper" Version="2.0.30" />
+    <PackageReference Include="MySql.Data" Version="8.0.19" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Diagnosis\" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Diagnosis>
+
+<h2>Diagnoses</h2>
+
+<div style="display: block">
+    <a href="/Diagnosis/InsertDiagnosis/">Add a Diagnosis</a>
+</div>
+
+<table class="table">
+    <tr>
+        <th>Diagnosis ID</th>
+        <th>Specification ID</th>
+        <th>Name</th>
+        <th>Severity ID</th>
+        <th>Date</th>
+    </tr>
+
+    @foreach (var diagnosis in Model)
+    {
+        <tr>
+            <td><a href=/Diagnosis/ViewDiagnosis/@diagnosis.DiagnosisID>@diagnosis.DiagnosisID</a></td>
+            <td>@diagnosis.SpecificationID</td>
+            <td>@diagnosis.Name</td>
+            <td>@diagnosis.SeverityID</td>
+            <td>@diagnosis.Date</td>
+        </tr>
+
+    }
+</table>

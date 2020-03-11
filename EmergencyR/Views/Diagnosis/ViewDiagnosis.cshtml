@@ -1,0 +1,32 @@
+﻿@model Diagnosis
+
+<h3>@Model.Name Information</h3>
+
+<table class="table">
+    <tr>
+        <th>Diagnosis ID</th>
+        <th>Specification ID</th>
+        <th>Name</th>
+        <th>Severity ID</th>
+        <th>Date</th>
+    </tr>
+    <tr>
+        <td>@Model.DiagnosisID</td>
+        <td>@Model.SpecificationID</td>
+        <td>@Model.Name</td>
+        <td>@Model.SeverityID</td>
+        <td>@Model.Date</td>
+    </tr>
+</table>
+
+<div style="display: block">
+    <a href="/Diagnosis/UpdateDiagnosis/@Model.DiagnosisID">Update Diagnosis</a>
+</div>
+
+<div style="display: block">
+    @using (Html.BeginForm("DeleteDiagnosis", "Diagnosis", "Post"))
+    {
+        <input type="hidden" asp-for="DiagnosisID" value="@Model.DiagnosisID" />
+        <input type="submit" onclick="return confirm('Confirm')" value="Delete This Entry" />
+    }
+</div>
