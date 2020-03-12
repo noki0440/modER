@@ -13,5 +13,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Diagnosis\" />
+    <Folder Include="wwwroot\css\IMG\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\css\IMG\LogoMakr_40CLqc.png" />
+    <Content Remove="wwwroot\css\IMG\Logo.png" />
   </ItemGroup>
 </Project>
